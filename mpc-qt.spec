@@ -1,5 +1,5 @@
 Name:           mpc-qt
-Version:        18.08
+Version:        18.03
 Release:        1%{?dist}
 Summary:        A clone of Media Player Classic reimplemented in Qt
 License:        GPLv2+
@@ -49,6 +49,6 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/mpc-qt.desktop
 
 
 %changelog
-* Sat Jun 01 2019 Leigh Scott <leigh123linux@googlemail.com> - 18.08-1
+* Sat Jun 01 2019 Leigh Scott <leigh123linux@googlemail.com> - 18.03-1
 - First Build
 
