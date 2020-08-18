@@ -15,6 +15,9 @@ BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5Network)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5X11Extras)
+%if 0%{?fedora} >= 32
+BuildRequires:  qt5-qtbase-private-devel
+%endif
 BuildRequires:  qt5-linguist
 
 %description
