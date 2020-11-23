@@ -5,19 +5,19 @@ Summary:        A clone of Media Player Classic reimplemented in Qt
 License:        GPLv2+
 URL:            https://github.com/cmdrkotori/mpc-qt
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
+# based on https://github.com/ahjolinna/mpc-qt/commit/21a1bd753ba00891e6d89c5c501655f5df1df775
+Patch0:         add_qthelper.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gcc-c++
-BuildRequires:  pkgconfig(mpv)
+BuildRequires:  mpv-libs-devel
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5DBus)
 BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5Network)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5X11Extras)
-%if 0%{?fedora} >= 32
 BuildRequires:  qt5-qtbase-private-devel
-%endif
 BuildRequires:  qt5-linguist
 
 %description
