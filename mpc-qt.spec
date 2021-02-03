@@ -1,6 +1,6 @@
 Name:           mpc-qt
 Version:        18.08
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        A clone of Media Player Classic reimplemented in Qt
 License:        GPLv2+
 URL:            https://github.com/cmdrkotori/mpc-qt
@@ -52,6 +52,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/mpc-qt.desktop
 
 
 %changelog
+* Wed Feb 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 18.08-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Mon Nov 23 2020 Leigh Scott <leigh123linux@gmail.com> - 18.08-5
 - Rebuild for new mpv
 
