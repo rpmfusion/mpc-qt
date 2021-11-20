@@ -1,12 +1,10 @@
 Name:           mpc-qt
-Version:        18.08
-Release:        7%{?dist}
+Version:        20.10
+Release:        1%{?dist}
 Summary:        A clone of Media Player Classic reimplemented in Qt
 License:        GPLv2+
-URL:            https://github.com/cmdrkotori/mpc-qt
+URL:            https://github.com/mpc-qt/mpc-qt
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
-# based on https://github.com/ahjolinna/mpc-qt/commit/21a1bd753ba00891e6d89c5c501655f5df1df775
-Patch0:         add_qthelper.patch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:  gcc-c++
