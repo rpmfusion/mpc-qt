@@ -50,6 +50,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/mpc-qt.desktop
 
 
 %changelog
+* Sun Nov 21 2021 Sérgio Basto <sergio@serjux.com> - 20.10-1
+- Update mpc-qt to 20.10
+
 * Tue Aug 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 18.08-7
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
