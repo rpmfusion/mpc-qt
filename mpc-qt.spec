@@ -1,6 +1,6 @@
 Name:           mpc-qt
-Version:        20.10
-Release:        2%{?dist}
+Version:        22.02
+Release:        1%{?dist}
 Summary:        A clone of Media Player Classic reimplemented in Qt
 License:        GPLv2+
 URL:            https://github.com/mpc-qt/mpc-qt
@@ -50,6 +50,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/mpc-qt.desktop
 
 
 %changelog
+* Mon Feb 28 2022 Sérgio Basto <sergio@serjux.com> - 22.02-1
+- Update mpc-qt to 22.02
+
 * Wed Feb 09 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 20.10-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
