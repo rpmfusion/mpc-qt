@@ -7,6 +7,7 @@ URL:            https://github.com/mpc-qt/mpc-qt
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
+BuildRequires:  libappstream-glib
 BuildRequires:  gcc-c++
 BuildRequires:  mpv-libs-devel
 BuildRequires:  pkgconfig(Qt5Core)
@@ -37,15 +38,17 @@ rm -rf mpv-dev
 rm %{buildroot}%{_datadir}/doc/mpc-qt/ipc.md
 
 %check
-desktop-file-validate %{buildroot}%{_datadir}/applications/mpc-qt.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.mpc_qt.Mpc-Qt.desktop
+appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/io.github.mpc_qt.Mpc-Qt.appdata.xml
 
 %files
 %doc README.md DOCS/ipc.md
 %license LICENSE
 %{_bindir}/mpc-qt
-%{_datadir}/applications/mpc-qt.desktop
+%{_datadir}/applications/io.github.mpc_qt.Mpc-Qt.desktop
 %{_datadir}/mpc-qt/
 %{_datadir}/icons/hicolor/scalable/apps/%name.svg
+%{_metainfodir}/io.github.mpc_qt.Mpc-Qt.appdata.xml
 
 
 
