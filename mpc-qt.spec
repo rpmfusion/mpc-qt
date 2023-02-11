@@ -1,6 +1,6 @@
 Name:           mpc-qt
-Version:        22.02
-Release:        3%{?dist}
+Version:        23.02
+Release:        1%{?dist}
 Summary:        A clone of Media Player Classic reimplemented in Qt
 License:        GPLv2+
 URL:            https://github.com/mpc-qt/mpc-qt
@@ -50,6 +50,9 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/mpc-qt.desktop
 
 
 %changelog
+* Sat Feb 11 2023 Leigh Scott <leigh123linux@gmail.com> - 23.02-1
+- Update mpc-qt to 23.02
+
 * Thu Nov 17 2022 Vitaly Zaitsev <vitaly@easycoding.org> - 22.02-3
 - Rebuilt due to mpv update.
 
