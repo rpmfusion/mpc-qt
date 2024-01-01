@@ -1,23 +1,25 @@
 Name:           mpc-qt
-Version:        23.02
-Release:        2%{?dist}
+Version:        23.12
+Release:        1%{?dist}
 Summary:        A clone of Media Player Classic reimplemented in Qt
 License:        GPLv2+
 URL:            https://github.com/mpc-qt/mpc-qt
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  desktop-file-utils
-BuildRequires:  libappstream-glib
 BuildRequires:  gcc-c++
 BuildRequires:  mpv-libs-devel
-BuildRequires:  pkgconfig(Qt5Core)
-BuildRequires:  pkgconfig(Qt5DBus)
-BuildRequires:  pkgconfig(Qt5Gui)
-BuildRequires:  pkgconfig(Qt5Network)
-BuildRequires:  pkgconfig(Qt5Widgets)
-BuildRequires:  pkgconfig(Qt5X11Extras)
-BuildRequires:  qt5-qtbase-private-devel
-BuildRequires:  qt5-linguist
+BuildRequires:  pkgconfig(Qt6DBus)
+BuildRequires:	pkgconfig(Qt6Linguist)
+BuildRequires:	pkgconfig(Qt6Core)
+BuildRequires:  pkgconfig(Qt6Gui)
+BuildRequires:  pkgconfig(Qt6OpenGLWidgets)
+BuildRequires:  pkgconfig(Qt6Svg)
+BuildRequires:  pkgconfig(Qt6Help)
+BuildRequires:  pkgconfig(Qt6Network)
+BuildRequires:	pkgconfig(Qt6Widgets)
+BuildRequires:  qt6-qtbase-private-devel
+BuildRequires:  qt6-linguist
 
 %description
 Media Player Classic Home Cinema (mpc-hc) is considered by many to be the 
@@ -30,7 +32,7 @@ interface and functionality of mpc-h.
 rm -rf mpv-dev
 
 %build
-%{qmake_qt5} PREFIX=%{_prefix}
+%{qmake_qt6} PREFIX=%{_prefix}
 %{make_build}
 
 %install
@@ -38,21 +40,21 @@ rm -rf mpv-dev
 rm %{buildroot}%{_datadir}/doc/mpc-qt/ipc.md
 
 %check
-desktop-file-validate %{buildroot}%{_datadir}/applications/io.github.mpc_qt.Mpc-Qt.desktop
-appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/io.github.mpc_qt.Mpc-Qt.appdata.xml
+desktop-file-validate %{buildroot}%{_datadir}/applications/mpc-qt.desktop
 
 %files
 %doc README.md DOCS/ipc.md
 %license LICENSE
 %{_bindir}/mpc-qt
-%{_datadir}/applications/io.github.mpc_qt.Mpc-Qt.desktop
-%{_datadir}/mpc-qt/
+%{_datadir}/applications/mpc-qt.desktop
 %{_datadir}/icons/hicolor/scalable/apps/%name.svg
-%{_metainfodir}/io.github.mpc_qt.Mpc-Qt.appdata.xml
 
 
 
 %changelog
+* Mon Jan 01 2024 Leigh Scott <leigh123linux@gmail.com> - 23.12-1
+- Update mpc-qt to 23.12
+
 * Wed Aug 02 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 23.02-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
 
